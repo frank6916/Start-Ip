@@ -1,1 +1,590 @@
-# FRANKLIN
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Evaluación Franklin Patzi Marce | Formulario móvil</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(145deg, #0f172a 0%, #111827 100%);
+    color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .card {
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(2px);
+    border-radius: 1.5rem;
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    padding: 1.5rem;
+    box-shadow: 0 25px 45px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(56, 189, 248, 0.15);
+    border: 1px solid #334155;
+  }
+
+  h1 {
+    color: #38bdf8;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  h1:before {
+    content: "📋";
+    font-size: 1.6rem;
+  }
+
+  .subhead {
+    text-align: center;
+    border-bottom: 1px dashed #334155;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .subhead p {
+    font-size: 1rem;
+    background: #0f172a80;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+  }
+
+  .student-name {
+    font-weight: 700;
+    color: #facc15;
+    background: #1e293b;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    display: inline-block;
+  }
+
+  .form-group {
+    margin-bottom: 1.4rem;
+    text-align: left;
+  }
+
+  .question {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: #e2e8f0;
+  }
+
+  .question .q-num {
+    background: #0f172a;
+    color: #7dd3fc;
+    border-radius: 30px;
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  textarea, input, select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    color: #f8fafc;
+    transition: 0.2s;
+    font-family: inherit;
+    resize: vertical;
+  }
+
+  textarea:focus, input:focus, select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px #38bdf840;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+    background: #0f172a;
+    padding: 0.7rem 0.9rem;
+    border-radius: 32px;
+    border: 1px solid #334155;
+  }
+
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 0.85rem;
+    flex: 1 0 auto;
+    min-width: 120px;
+  }
+
+  .radio-group input {
+    width: auto;
+    transform: scale(1.05);
+    accent-color: #38bdf8;
+    margin: 0;
+  }
+
+  .note-field {
+    margin-top: 6px;
+  }
+
+  .inline-hint {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 5px;
+  }
+
+  button {
+    background: #0f172a;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: inherit;
+  }
+
+  button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 8px 20px -8px #38bdf880;
+    border-color: #38bdf8;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .result-message {
+    margin-top: 18px;
+    background: #1e293b;
+    border-radius: 32px;
+    padding: 12px;
+    font-size: 0.85rem;
+    text-align: center;
+    border-left: 4px solid #38bdf8;
+    transition: all 0.2s;
+  }
+
+  footer {
+    font-size: 0.65rem;
+    text-align: center;
+    margin-top: 24px;
+    color: #5b6e8c;
+  }
+
+  hr {
+    border-color: #2d3a4e;
+    margin: 12px 0;
+  }
+
+  /* mejoras táctiles para móvil */
+  input, textarea, button, label {
+    touch-action: manipulation;
+  }
+
+  /* Enlace tipo "compartir" estilo Google Drive */
+  .share-link-container {
+    margin-top: 20px;
+    padding: 12px;
+    background: #0f172a80;
+    border-radius: 28px;
+    text-align: center;
+    border: 1px dashed #38bdf860;
+  }
+
+  .share-link-container p {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+  }
+
+  .link-copy-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fake-link {
+    background: #0a0f1c;
+    padding: 8px 12px;
+    border-radius: 40px;
+    font-size: 0.7rem;
+    color: #7dd3fc;
+    font-family: monospace;
+    word-break: break-all;
+    flex: 1;
+    text-align: center;
+    border: 1px solid #334155;
+  }
+
+  .copy-btn {
+    background: #1e293b;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.1s;
+    white-space: nowrap;
+  }
+
+  .copy-btn:active {
+    background: #38bdf8;
+    color: #0f172a;
+  }
+
+  @media (max-width: 550px) {
+    .card {
+      padding: 1.2rem;
+    }
+    .radio-group {
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 24px;
+    }
+    .radio-group label {
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Evaluación Franklin</h1>
+  <div class="subhead">
+    <p>📌 <span class="student-name">Franklin Patzi Marce</span> · Estudiante · Ingeniería</p>
+  </div>
+
+  <form id="evalForm">
+    <!-- 1. Responsabilidad -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">1</span> ¿Es responsable?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="responsable" value="Sí, siempre"> ✅ Sí, siempre</label>
+        <label><input type="radio" name="responsable" value="Generalmente sí"> 👍 Generalmente sí</label>
+        <label><input type="radio" name="responsable" value="A veces falla"> ⚠️ A veces falla</label>
+        <label><input type="radio" name="responsable" value="No es responsable"> ❌ No es responsable</label>
+      </div>
+    </div>
+
+    <!-- 2. Mentalidad de ingeniero -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">2</span> ¿Tiene mentalidad de ingeniero?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="mentalidad" value="Sí, análisis y visión"> 🧠 Sí, análisis y visión</label>
+        <label><input type="radio" name="mentalidad" value="En desarrollo"> 📈 En desarrollo</label>
+        <label><input type="radio" name="mentalidad" value="Le falta perspectiva"> 🔍 Le falta perspectiva</label>
+        <label><input type="radio" name="mentalidad" value="No la demuestra"> 🚫 No la demuestra</label>
+      </div>
+    </div>
+
+    <!-- 3. Resuelve problemas bien -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">3</span> ¿Resuelve problemas bien?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="problemas" value="Excelente, creativo y lógico"> 💡 Excelente, creativo y lógico</label>
+        <label><input type="radio" name="problemas" value="Bien, pero a veces se bloquea"> 🛠️ Bien, pero a veces se bloquea</label>
+        <label><input type="radio" name="problemas" value="Requiere guía constante"> 🧭 Requiere guía constante</label>
+        <label><input type="radio" name="problemas" value="Débil en resolución"> ⚠️ Débil en resolución</label>
+      </div>
+    </div>
+
+    <!-- 4. Trabajo en equipo -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">4</span> ¿Trabaja en equipo?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="equipo" value="Colabora excelente"> 🤝 Colabora excelente</label>
+        <label><input type="radio" name="equipo" value="Bien, pero podría mejorar comunicación"> 🗣️ Bien, mejora comunicación</label>
+        <label><input type="radio" name="equipo" value="A veces aislado"> 🧩 A veces aislado</label>
+        <label><input type="radio" name="equipo" value="Dificultad para trabajar en grupo"> 🚧 Dificultad grupal</label>
+      </div>
+    </div>
+
+    <!-- 5. ¿Qué debería mejorar? (texto libre) -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">5</span> ¿Qué debería mejorar? (aspectos concretos)</div>
+      <textarea name="mejora" rows="3" placeholder="Ej: organización, comunicación técnica, puntualidad, proactividad..."></textarea>
+    </div>
+
+    <!-- 6. ¿Lo ves como buen profesional? -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">6</span> ¿Lo ves como buen profesional a futuro?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="profesional" value="Totalmente, gran potencial"> 🌟 Totalmente, gran potencial</label>
+        <label><input type="radio" name="profesional" value="Sí, con ciertos ajustes"> ✅ Sí, con ciertos ajustes</label>
+        <label><input type="radio" name="profesional" value="No estoy seguro/a"> 🤔 No estoy seguro/a</label>
+        <label><input type="radio" name="profesional" value="Por ahora no lo veo"> ❌ Por ahora no lo veo</label>
+      </div>
+    </div>
+
+    <!-- 7. Nota del 1 al 10 -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">7</span> Nota del 1 al 10:</div>
+      <div class="note-field">
+        <input type="number" name="nota" min="1" max="10" step="0.5" placeholder="Ej: 8.5" style="width: 100%;">
+      </div>
+      <div class="inline-hint">⭐ 1 = muy bajo, 10 = excelente</div>
+    </div>
+
+    <!-- Datos del evaluador (opcional) -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">📩</span> Tu nombre o identificador (opcional)</div>
+      <input type="text" name="evaluador" placeholder="Ej: Profesor Martínez, compañera Ana, etc.">
+    </div>
+
+    <button type="button" id="sendPrivateBtn">📨 Enviar evaluación por mensaje privado</button>
+  </form>
+
+  <!-- SECCIÓN DE LINK COMPARTIBLE ESTILO GOOGLE DRIVE PARA MÓVIL -->
+  <div class="share-link-container" id="shareLinkBox" style="margin-top: 1rem;">
+    <p>🔗 Comparte este formulario (link tipo Drive):</p>
+    <div class="link-copy-area">
+      <span class="fake-link" id="pageUrlDisplay">Cargando enlace...</span>
+      <button type="button" class="copy-btn" id="copyLinkBtn">📋 Copiar</button>
+    </div>
+    <p style="font-size: 0.65rem; margin-top: 8px;">✓ Enlace directo para móvil — compatible con WhatsApp, Telegram, etc.</p>
+  </div>
+
+  <div id="statusMsg" class="result-message" style="display: none;"></div>
+  <footer>✍️ Evaluación confidencial · Se envía a tu correo · Franklin recibirá el mensaje privado</footer>
+</div>
+
+<script>
+  (function() {
+    const sendBtn = document.getElementById('sendPrivateBtn');
+    const statusDiv = document.getElementById('statusMsg');
+    const copyBtn = document.getElementById('copyLinkBtn');
+    const urlDisplaySpan = document.getElementById('pageUrlDisplay');
+
+    // Obtener la URL actual (dinámica) para compartir como link de Drive
+    let currentUrl = window.location.href;
+    // Si es archivo local o "about:blank", generamos un mensaje útil
+    if (currentUrl === 'about:blank' || currentUrl === '' || currentUrl.indexOf('file://') === 0) {
+      // Si se abre localmente, se recomienda subirlo a hosting o dar instrucción
+      currentUrl = window.location.href;
+      if (currentUrl.startsWith('file:')) {
+        urlDisplaySpan.innerText = '📁 Sube este archivo HTML a un hosting (o usa GitHub Pages)';
+        urlDisplaySpan.style.color = '#facc15';
+      } else {
+        urlDisplaySpan.innerText = currentUrl || 'Enlace actual - copia manualmente';
+      }
+    } else {
+      urlDisplaySpan.innerText = currentUrl;
+    }
+
+    // Función para copiar el enlace al portapapeles (funciona en móviles)
+    function copyLinkToClipboard() {
+      let urlToCopy = window.location.href;
+      if (urlToCopy === 'about:blank' || urlToCopy === '') urlToCopy = document.URL;
+      if (urlToCopy.startsWith('file:')) {
+        statusDiv.style.display = 'block';
+        statusDiv.innerHTML = "⚠️ Este archivo está en local. Para compartir en móvil, súbelo a un servidor web o GitHub Pages.";
+        statusDiv.style.background = "#2d1f2a";
+        setTimeout(() => {
+          setTimeout(() => { statusDiv.style.display = 'none'; }, 4000);
+        }, 100);
+        return;
+      }
+      
+      // Usar la API de clipboard moderna
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(urlToCopy).then(() => {
+          statusDiv.style.display = 'block';
+          statusDiv.innerHTML = "✅ Enlace copiado al portapapeles. ¡Pégalo en WhatsApp, correo o mensaje!";
+          statusDiv.style.background = "#0f2e1a";
+          setTimeout(() => {
+            statusDiv.style.display = 'none';
+          }, 3000);
+        }).catch(err => {
+          fallbackCopy(urlToCopy);
+        });
+      } else {
+        fallbackCopy(urlToCopy);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      statusDiv.style.display = 'block';
+      statusDiv.innerHTML = "📋 Enlace copiado (método alternativo). Compártelo con Franklin.";
+      statusDiv.style.background = "#1e293b";
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 3000);
+    }
+
+    copyBtn.addEventListener('click', copyLinkToClipboard);
+
+    // Funciones del formulario (envío por mail)
+    function getSelectedRadioValue(name) {
+      const radios = document.querySelectorAll(`input[name="${name}"]`);
+      for (let radio of radios) {
+        if (radio.checked) return radio.value;
+      }
+      return '❌ No respondido';
+    }
+
+    function buildEmailBody() {
+      const responsable = getSelectedRadioValue('responsable');
+      const mentalidad = getSelectedRadioValue('mentalidad');
+      const problemas = getSelectedRadioValue('problemas');
+      const equipo = getSelectedRadioValue('equipo');
+      const profesional = getSelectedRadioValue('profesional');
+
+      let mejora = document.querySelector('textarea[name="mejora"]').value.trim();
+      if (mejora === "") mejora = "(No se especificó)";
+
+      let notaRaw = document.querySelector('input[name="nota"]').value.trim();
+      let notaFinal = "No especificada";
+      if (notaRaw !== "") {
+        const parsed = parseFloat(notaRaw);
+        if (!isNaN(parsed) && parsed >= 1 && parsed <= 10) notaFinal = parsed.toString();
+        else notaFinal = notaRaw + " (valor inválido, usar 1-10)";
+      }
+
+      let evaluador = document.querySelector('input[name="evaluador"]').value.trim();
+      if (evaluador === "") evaluador = "Anónimo (evaluador sin identificar)";
+
+      const now = new Date();
+      const fechaHora = now.toLocaleString();
+
+      let body = "📊 EVALUACIÓN FRANKLIN PATZI MARCE 📊\n";
+      body += "─────────────────────────────────────\n";
+      body += `📅 Fecha: ${fechaHora}\n`;
+      body += `👤 Evaluador: ${evaluador}\n\n`;
+      body += "🔹 RESPUESTAS:\n";
+      body += `1. ¿Es responsable? → ${responsable}\n`;
+      body += `2. ¿Mentalidad ingeniero? → ${mentalidad}\n`;
+      body += `3. ¿Resuelve problemas bien? → ${problemas}\n`;
+      body += `4. ¿Trabaja en equipo? → ${equipo}\n`;
+      body += `5. ¿Qué mejorar? → ${mejora}\n`;
+      body += `6. ¿Buen profesional? → ${profesional}\n`;
+      body += `7. Nota (1-10): → ${notaFinal}\n\n`;
+      body += "💬 Puedes agregar comentarios extra antes de enviar.\n";
+      body += "─────────────────────────────────────\n";
+      return body;
+    }
+
+    function showWarningIfIncomplete() {
+      const radiosRequired = ['responsable', 'mentalidad', 'problemas', 'equipo', 'profesional'];
+      let missing = [];
+      for (let req of radiosRequired) {
+        const anyChecked = document.querySelector(`input[name="${req}"]:checked`);
+        if (!anyChecked) missing.push(req);
+      }
+      const notaInput = document.querySelector('input[name="nota"]');
+      let notaEmpty = false;
+      if (!notaInput.value.trim()) notaEmpty = true;
+
+      if (missing.length > 0 || notaEmpty) {
+        let msg = "⚠️ Algunas respuestas están vacías:\n";
+        if (missing.includes('responsable')) msg += "- Pregunta 1 (responsable)\n";
+        if (missing.includes('mentalidad')) msg += "- Pregunta 2 (mentalidad ingenieril)\n";
+        if (missing.includes('problemas')) msg += "- Pregunta 3 (resolución de problemas)\n";
+        if (missing.includes('equipo')) msg += "- Pregunta 4 (trabajo en equipo)\n";
+        if (missing.includes('profesional')) msg += "- Pregunta 6 (futuro profesional)\n";
+        if (notaEmpty) msg += "- Nota (pregunta 7)\n";
+        msg += "\n¿Deseas continuar de todas formas? (Se enviará el formulario parcial)";
+        return !confirm(msg);
+      }
+      return false;
+    }
+
+    function sendPrivateEvaluation() {
+      const cancelled = showWarningIfIncomplete();
+      if (cancelled) return;
+
+      const subject = encodeURIComponent("Evaluación para Franklin Patzi Marce - Respuesta privada");
+      let bodyText = buildEmailBody();
+      const mailtoLink = `mailto:?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+
+      statusDiv.style.display = 'block';
+      statusDiv.innerHTML = "📧 Abriendo cliente de correo... Envía el mensaje a Franklin o al destinatario.<br>✏️ Puedes editar antes de enviar.";
+      statusDiv.style.background = "#0f212e";
+      setTimeout(() => {
+        window.location.href = mailtoLink;
+      }, 200);
+      setTimeout(() => {
+        if (statusDiv) statusDiv.style.opacity = "0.8";
+      }, 5000);
+    }
+
+    sendBtn.addEventListener('click', sendPrivateEvaluation);
+
+    const form = document.getElementById('evalForm');
+    form.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' && (e.target.tagName !== 'TEXTAREA' && e.target.type !== 'number')) {
+        e.preventDefault();
+      }
+    });
+
+    // Si la URL es muy larga o se ve fea, podemos mostrar un texto más amigable en móvil (sin afectar funcionalidad)
+    if (window.innerWidth <= 600) {
+      let shortHint = window.location.href;
+      if (shortHint.length > 70 && !shortHint.startsWith('file:')) {
+        // Mostrar versión recortada para no romper diseño, pero el enlace real se copia completo
+        let displayShort = shortHint.substring(0, 55) + "…";
+        urlDisplaySpan.innerText = displayShort;
+        urlDisplaySpan.title = shortHint;
+      } else if (shortHint.startsWith('file:')) {
+        urlDisplaySpan.innerText = "📁 Archivo local → comparte subiendo a hosting";
+      }
+    }
+  })();
+</script>
+</body>
+</html>
