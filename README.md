@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Evaluación Franklin Patzi Marce | Formulario móvil</title>
+<title>Start-Ip | Preferencias app de subastas | Equipo Start-Ip</title>
 <style>
   * {
     margin: 0;
@@ -14,7 +14,7 @@
 
   body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(145deg, #0f172a 0%, #111827 100%);
+    background: linear-gradient(145deg, #0a2e1f 0%, #0a1f1a 100%);
     color: #f1f5f9;
     min-height: 100vh;
     display: flex;
@@ -24,19 +24,19 @@
   }
 
   .card {
-    background: rgba(31, 41, 55, 0.95);
+    background: rgba(18, 28, 24, 0.95);
     backdrop-filter: blur(2px);
     border-radius: 1.5rem;
-    max-width: 650px;
+    max-width: 680px;
     width: 100%;
     margin: auto;
     padding: 1.5rem;
-    box-shadow: 0 25px 45px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(56, 189, 248, 0.15);
-    border: 1px solid #334155;
+    box-shadow: 0 25px 45px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(80, 200, 120, 0.25);
+    border: 1px solid #2a5540;
   }
 
   h1 {
-    color: #38bdf8;
+    color: #6ee7b7;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: -0.3px;
@@ -44,35 +44,53 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 0.3rem;
     flex-wrap: wrap;
   }
 
   h1:before {
-    content: "📋";
+    content: "⏱️";
     font-size: 1.6rem;
   }
 
   .subhead {
     text-align: center;
-    border-bottom: 1px dashed #334155;
+    border-bottom: 1px dashed #2a6b4a;
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .subhead p {
-    font-size: 1rem;
-    background: #0f172a80;
-    display: inline-block;
-    padding: 0.3rem 1rem;
-    border-radius: 40px;
-    backdrop-filter: blur(4px);
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 8px;
   }
 
-  .student-name {
+  .team-badge {
+    background: #0f2a1e;
+    border-radius: 40px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    border-left: 3px solid #6ee7b7;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .team-badge strong {
+    color: #facc15;
+    font-weight: 600;
+  }
+
+  .brand {
     font-weight: 700;
     color: #facc15;
-    background: #1e293b;
+    background: #1e3a2f;
     padding: 0.2rem 0.7rem;
     border-radius: 20px;
     display: inline-block;
@@ -95,8 +113,8 @@
   }
 
   .question .q-num {
-    background: #0f172a;
-    color: #7dd3fc;
+    background: #0f2a1e;
+    color: #6ee7b7;
     border-radius: 30px;
     width: 26px;
     height: 26px;
@@ -110,8 +128,8 @@
   textarea, input, select {
     width: 100%;
     padding: 12px 14px;
-    background: #0f172a;
-    border: 1px solid #334155;
+    background: #0f241d;
+    border: 1px solid #2a6b4a;
     border-radius: 20px;
     font-size: 0.95rem;
     color: #f8fafc;
@@ -122,8 +140,8 @@
 
   textarea:focus, input:focus, select:focus {
     outline: none;
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px #38bdf840;
+    border-color: #6ee7b7;
+    box-shadow: 0 0 0 3px #6ee7b740;
   }
 
   .radio-group {
@@ -131,10 +149,10 @@
     flex-wrap: wrap;
     gap: 0.8rem;
     align-items: center;
-    background: #0f172a;
+    background: #0f241d;
     padding: 0.7rem 0.9rem;
     border-radius: 32px;
-    border: 1px solid #334155;
+    border: 1px solid #2a6b4a;
   }
 
   .radio-group label {
@@ -145,30 +163,26 @@
     cursor: pointer;
     font-size: 0.85rem;
     flex: 1 0 auto;
-    min-width: 120px;
+    min-width: 110px;
   }
 
   .radio-group input {
     width: auto;
     transform: scale(1.05);
-    accent-color: #38bdf8;
+    accent-color: #6ee7b7;
     margin: 0;
-  }
-
-  .note-field {
-    margin-top: 6px;
   }
 
   .inline-hint {
     font-size: 0.7rem;
-    color: #94a3b8;
+    color: #9bbdaa;
     margin-top: 5px;
   }
 
   button {
-    background: #0f172a;
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
+    background: #0f241d;
+    border: 2px solid #6ee7b7;
+    color: #6ee7b7;
     padding: 14px 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -185,10 +199,10 @@
   }
 
   button:hover {
-    background: #38bdf8;
-    color: #0f172a;
-    box-shadow: 0 8px 20px -8px #38bdf880;
-    border-color: #38bdf8;
+    background: #6ee7b7;
+    color: #0a2e1f;
+    box-shadow: 0 8px 20px -8px #6ee7b7aa;
+    border-color: #6ee7b7;
   }
 
   button:active {
@@ -197,12 +211,12 @@
 
   .result-message {
     margin-top: 18px;
-    background: #1e293b;
+    background: #1e3a2f;
     border-radius: 32px;
     padding: 12px;
     font-size: 0.85rem;
     text-align: center;
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid #6ee7b7;
     transition: all 0.2s;
   }
 
@@ -210,27 +224,16 @@
     font-size: 0.65rem;
     text-align: center;
     margin-top: 24px;
-    color: #5b6e8c;
+    color: #5e8b76;
   }
 
-  hr {
-    border-color: #2d3a4e;
-    margin: 12px 0;
-  }
-
-  /* mejoras táctiles para móvil */
-  input, textarea, button, label {
-    touch-action: manipulation;
-  }
-
-  /* Enlace tipo "compartir" estilo Google Drive */
   .share-link-container {
     margin-top: 20px;
     padding: 12px;
-    background: #0f172a80;
+    background: #0f241d80;
     border-radius: 28px;
     text-align: center;
-    border: 1px dashed #38bdf860;
+    border: 1px dashed #6ee7b760;
   }
 
   .share-link-container p {
@@ -248,34 +251,50 @@
   }
 
   .fake-link {
-    background: #0a0f1c;
+    background: #0a1f18;
     padding: 8px 12px;
     border-radius: 40px;
     font-size: 0.7rem;
-    color: #7dd3fc;
+    color: #a7f3d0;
     font-family: monospace;
     word-break: break-all;
     flex: 1;
     text-align: center;
-    border: 1px solid #334155;
+    border: 1px solid #2a6b4a;
   }
 
   .copy-btn {
-    background: #1e293b;
-    border: 1px solid #38bdf8;
-    color: #38bdf8;
+    background: #1e3a2f;
+    border: 1px solid #6ee7b7;
+    color: #6ee7b7;
     padding: 6px 14px;
     font-size: 0.75rem;
     border-radius: 40px;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.1s;
     white-space: nowrap;
   }
 
   .copy-btn:active {
-    background: #38bdf8;
-    color: #0f172a;
+    background: #6ee7b7;
+    color: #0a2e1f;
+  }
+
+  .destino-info {
+    background: #1e3a2f;
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    color: #a7f3d0;
+  }
+
+  .destino-info span {
+    color: #facc15;
+    font-weight: bold;
   }
 
   @media (max-width: 550px) {
@@ -293,100 +312,154 @@
     h1 {
       font-size: 1.5rem;
     }
+    .team-badge {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+    }
   }
 </style>
 </head>
 <body>
 
 <div class="card">
-  <h1>Evaluación Franklin</h1>
+  <h1>Start-Ip · Subastas</h1>
   <div class="subhead">
-    <p>📌 <span class="student-name">Franklin Patzi Marce</span> · Estudiante · Ingeniería</p>
+    <p>📦 <span class="brand">¿Qué te gustaría en una app de subastas?</span> · 10 preguntas</p>
+    
+    <!-- EQUIPO START-IP -->
+    <div class="team-grid">
+      <div class="team-badge">👑 <strong>Franklin Patzi Marce</strong> · Líder · PO/Tester</div>
+      <div class="team-badge">📄 <strong>Angelica Burgos</strong> · Documentador</div>
+      <div class="team-badge">🎨 <strong>Jhoao Cesar Daza Vargas</strong> · Frontend</div>
+      <div class="team-badge">⚙️ <strong>Lucio Daniel Ticona</strong> · Backend</div>
+    </div>
+    
+    <!-- DESTINO FIJO DEL CORREO -->
+    <div class="destino-info">
+      📧 Las respuestas se enviarán directamente a: <span>franklinys1@gmail.com</span>
+    </div>
+    <p style="font-size: 0.7rem; margin-top: 8px;">✨ Equipo Start-Ip — Tu opinión construye la mejor experiencia en subastas</p>
   </div>
 
   <form id="evalForm">
-    <!-- 1. Responsabilidad -->
+    <!-- 1. Categorías favoritas -->
     <div class="form-group">
-      <div class="question"><span class="q-num">1</span> ¿Es responsable?</div>
+      <div class="question"><span class="q-num">1</span> ¿Qué categorías te interesan más?</div>
       <div class="radio-group">
-        <label><input type="radio" name="responsable" value="Sí, siempre"> ✅ Sí, siempre</label>
-        <label><input type="radio" name="responsable" value="Generalmente sí"> 👍 Generalmente sí</label>
-        <label><input type="radio" name="responsable" value="A veces falla"> ⚠️ A veces falla</label>
-        <label><input type="radio" name="responsable" value="No es responsable"> ❌ No es responsable</label>
+        <label><input type="radio" name="categoria" value="Tecnología y gadgets"> 📱 Tecnología y gadgets</label>
+        <label><input type="radio" name="categoria" value="Autos y motos"> 🚗 Autos y motos</label>
+        <label><input type="radio" name="categoria" value="Moda y accesorios"> 👕 Moda y accesorios</label>
+        <label><input type="radio" name="categoria" value="Coleccionables y arte"> 🎨 Coleccionables/arte</label>
+        <label><input type="radio" name="categoria" value="Hogar y electrodomésticos"> 🏠 Hogar</label>
       </div>
     </div>
 
-    <!-- 2. Mentalidad de ingeniero -->
+    <!-- 2. Tipo de subasta preferida -->
     <div class="form-group">
-      <div class="question"><span class="q-num">2</span> ¿Tiene mentalidad de ingeniero?</div>
+      <div class="question"><span class="q-num">2</span> ¿Qué tipo de subasta prefieres?</div>
       <div class="radio-group">
-        <label><input type="radio" name="mentalidad" value="Sí, análisis y visión"> 🧠 Sí, análisis y visión</label>
-        <label><input type="radio" name="mentalidad" value="En desarrollo"> 📈 En desarrollo</label>
-        <label><input type="radio" name="mentalidad" value="Le falta perspectiva"> 🔍 Le falta perspectiva</label>
-        <label><input type="radio" name="mentalidad" value="No la demuestra"> 🚫 No la demuestra</label>
+        <label><input type="radio" name="tipo" value="Subasta tradicional (mayor oferta gana)"> ⏫ Tradicional (mayor oferta)</label>
+        <label><input type="radio" name="tipo" value="Subasta inversa (precio baja hasta comprar)"> 🔻 Subasta inversa</label>
+        <label><input type="radio" name="tipo" value="Subasta con tiempo límite fijo"> ⏱️ Tiempo límite fijo</label>
+        <label><input type="radio" name="tipo" value="Subasta estilo 'puja oculta'"> 🕵️ Puja oculta</label>
       </div>
     </div>
 
-    <!-- 3. Resuelve problemas bien -->
+    <!-- 3. Funcionalidad más importante -->
     <div class="form-group">
-      <div class="question"><span class="q-num">3</span> ¿Resuelve problemas bien?</div>
+      <div class="question"><span class="q-num">3</span> ¿Qué funcionalidad valoras más?</div>
       <div class="radio-group">
-        <label><input type="radio" name="problemas" value="Excelente, creativo y lógico"> 💡 Excelente, creativo y lógico</label>
-        <label><input type="radio" name="problemas" value="Bien, pero a veces se bloquea"> 🛠️ Bien, pero a veces se bloquea</label>
-        <label><input type="radio" name="problemas" value="Requiere guía constante"> 🧭 Requiere guía constante</label>
-        <label><input type="radio" name="problemas" value="Débil en resolución"> ⚠️ Débil en resolución</label>
+        <label><input type="radio" name="funcion" value="Notificaciones en tiempo real"> 🔔 Notificaciones en tiempo real</label>
+        <label><input type="radio" name="funcion" value="Historial de pujas y transparencia"> 📜 Historial transparente</label>
+        <label><input type="radio" name="funcion" value="Chat con vendedores"> 💬 Chat integrado</label>
+        <label><input type="radio" name="funcion" value="Pagos seguros y múltiples métodos"> 💳 Pagos seguros</label>
       </div>
     </div>
 
-    <!-- 4. Trabajo en equipo -->
+    <!-- 4. Frecuencia de uso estimada -->
     <div class="form-group">
-      <div class="question"><span class="q-num">4</span> ¿Trabaja en equipo?</div>
+      <div class="question"><span class="q-num">4</span> ¿Con qué frecuencia usarías la app?</div>
       <div class="radio-group">
-        <label><input type="radio" name="equipo" value="Colabora excelente"> 🤝 Colabora excelente</label>
-        <label><input type="radio" name="equipo" value="Bien, pero podría mejorar comunicación"> 🗣️ Bien, mejora comunicación</label>
-        <label><input type="radio" name="equipo" value="A veces aislado"> 🧩 A veces aislado</label>
-        <label><input type="radio" name="equipo" value="Dificultad para trabajar en grupo"> 🚧 Dificultad grupal</label>
+        <label><input type="radio" name="frecuencia" value="A diario"> 🔥 A diario</label>
+        <label><input type="radio" name="frecuencia" value="Varias veces por semana"> 📅 Varias veces/semana</label>
+        <label><input type="radio" name="frecuencia" value="Una vez por semana"> 🗓️ Una vez por semana</label>
+        <label><input type="radio" name="frecuencia" value="Solo cuando hay algo específico"> 🎯 Solo algo específico</label>
       </div>
     </div>
 
-    <!-- 5. ¿Qué debería mejorar? (texto libre) -->
+    <!-- 5. Monto de puja habitual -->
     <div class="form-group">
-      <div class="question"><span class="q-num">5</span> ¿Qué debería mejorar? (aspectos concretos)</div>
-      <textarea name="mejora" rows="3" placeholder="Ej: organización, comunicación técnica, puntualidad, proactividad..."></textarea>
-    </div>
-
-    <!-- 6. ¿Lo ves como buen profesional? -->
-    <div class="form-group">
-      <div class="question"><span class="q-num">6</span> ¿Lo ves como buen profesional a futuro?</div>
+      <div class="question"><span class="q-num">5</span> ¿Qué rango de pujas manejas normalmente?</div>
       <div class="radio-group">
-        <label><input type="radio" name="profesional" value="Totalmente, gran potencial"> 🌟 Totalmente, gran potencial</label>
-        <label><input type="radio" name="profesional" value="Sí, con ciertos ajustes"> ✅ Sí, con ciertos ajustes</label>
-        <label><input type="radio" name="profesional" value="No estoy seguro/a"> 🤔 No estoy seguro/a</label>
-        <label><input type="radio" name="profesional" value="Por ahora no lo veo"> ❌ Por ahora no lo veo</label>
+        <label><input type="radio" name="monto" value="Menos de $50"> 💰 Menos de $50</label>
+        <label><input type="radio" name="monto" value="$50 - $200"> 💵 $50 - $200</label>
+        <label><input type="radio" name="monto" value="$200 - $1000"> 🪙 $200 - $1000</label>
+        <label><input type="radio" name="monto" value="Más de $1000"> 💎 Más de $1000</label>
       </div>
     </div>
 
-    <!-- 7. Nota del 1 al 10 -->
+    <!-- 6. ¿Qué te genera desconfianza en subastas online? -->
     <div class="form-group">
-      <div class="question"><span class="q-num">7</span> Nota del 1 al 10:</div>
-      <div class="note-field">
-        <input type="number" name="nota" min="1" max="10" step="0.5" placeholder="Ej: 8.5" style="width: 100%;">
+      <div class="question"><span class="q-num">6</span> ¿Qué te genera más desconfianza?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="desconfianza" value="Productos falsificados"> 🧐 Productos falsificados</label>
+        <label><input type="radio" name="desconfianza" value="Falta de protección al comprador"> 🛡️ Falta de protección</label>
+        <label><input type="radio" name="desconfianza" value="Pujas fraudulentas o bots"> 🤖 Pujas fraudulentas</label>
+        <label><input type="radio" name="desconfianza" value="Envíos lentos o dañados"> 📦 Envíos poco fiables</label>
       </div>
-      <div class="inline-hint">⭐ 1 = muy bajo, 10 = excelente</div>
     </div>
 
-    <!-- Datos del evaluador (opcional) -->
+    <!-- 7. Preferencia de diseño/app -->
     <div class="form-group">
-      <div class="question"><span class="q-num">📩</span> Tu nombre o identificador (opcional)</div>
-      <input type="text" name="evaluador" placeholder="Ej: Profesor Martínez, compañera Ana, etc.">
+      <div class="question"><span class="q-num">7</span> ¿Qué estilo de app prefieres?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="diseno" value="Modo oscuro siempre"> 🌙 Modo oscuro</label>
+        <label><input type="radio" name="diseno" value="Claro y minimalista"> ☀️ Claro y minimalista</label>
+        <label><input type="radio" name="diseno" value="Con animaciones y efectos"> ✨ Animaciones / efectos</label>
+        <label><input type="radio" name="diseno" value="Sencillo y rápido (sin distracciones)"> ⚡ Sencillo y rápido</label>
+      </div>
     </div>
 
-    <button type="button" id="sendPrivateBtn">📨 Enviar evaluación por mensaje privado</button>
+    <!-- 8. Funcionalidad social -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">8</span> ¿Te gustaría tener funciones sociales?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="social" value="Sí, perfiles públicos y valoraciones"> 👍 Sí, perfiles y valoraciones</label>
+        <label><input type="radio" name="social" value="Seguir a otros pujadores"> 👥 Seguir pujadores destacados</label>
+        <label><input type="radio" name="social" value="Solo lo necesario (cerrar ofertas)"> 🔒 Solo lo necesario</label>
+        <label><input type="radio" name="social" value="No me interesa la parte social"> 🚫 Sin redes internas</label>
+      </div>
+    </div>
+
+    <!-- 9. Método de pago favorito -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">9</span> ¿Qué método de pago te gustaría integrar?</div>
+      <div class="radio-group">
+        <label><input type="radio" name="pago" value="Tarjeta débito/crédito"> 💳 Tarjeta</label>
+        <label><input type="radio" name="pago" value="Transferencia bancaria"> 🏦 Transferencia</label>
+        <label><input type="radio" name="pago" value="Criptomonedas (USDT, BTC)"> ₿ Criptomonedas</label>
+        <label><input type="radio" name="pago" value="Billeteras digitales (Mercado Pago, PayPal)"> 📲 Billeteras digitales</label>
+      </div>
+    </div>
+
+    <!-- 10. Recomendación adicional (texto libre) -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">10</span> ¿Qué otra funcionalidad te gustaría ver en Start-Ip?</div>
+      <textarea name="sugerencia" rows="2" placeholder="Ej: subasta con reembolso garantizado, envíos tracking, recordatorios personalizados..."></textarea>
+    </div>
+
+    <!-- Campo opcional: nombre del evaluador -->
+    <div class="form-group">
+      <div class="question"><span class="q-num">📝</span> Tu nombre o identificador (opcional)</div>
+      <input type="text" name="evaluador" placeholder="Ej: Carlos, proveedor, usuario anónimo...">
+    </div>
+
+    <button type="button" id="sendPrivateBtn">📨 Enviar respuestas a Franklin (franklinys1@gmail.com)</button>
   </form>
 
-  <!-- SECCIÓN DE LINK COMPARTIBLE ESTILO GOOGLE DRIVE PARA MÓVIL -->
+  <!-- Link para compartir formulario estilo Drive -->
   <div class="share-link-container" id="shareLinkBox" style="margin-top: 1rem;">
-    <p>🔗 Comparte este formulario (link tipo Drive):</p>
+    <p>🔗 Comparte esta encuesta (link tipo Drive):</p>
     <div class="link-copy-area">
       <span class="fake-link" id="pageUrlDisplay">Cargando enlace...</span>
       <button type="button" class="copy-btn" id="copyLinkBtn">📋 Copiar</button>
@@ -395,7 +468,7 @@
   </div>
 
   <div id="statusMsg" class="result-message" style="display: none;"></div>
-  <footer>✍️ Evaluación confidencial · Se envía a tu correo · Franklin recibirá el mensaje privado</footer>
+  <footer>🏷️ Start-Ip · Franklin, Angelica, Jhoao, Lucio · Las respuestas llegan directo al líder del proyecto</footer>
 </div>
 
 <script>
@@ -405,14 +478,14 @@
     const copyBtn = document.getElementById('copyLinkBtn');
     const urlDisplaySpan = document.getElementById('pageUrlDisplay');
 
-    // Obtener la URL actual (dinámica) para compartir como link de Drive
+    // DESTINO FIJO
+    const DESTINO_CORREO = "franklinys1@gmail.com";
+
+    // Mostrar URL actual
     let currentUrl = window.location.href;
-    // Si es archivo local o "about:blank", generamos un mensaje útil
     if (currentUrl === 'about:blank' || currentUrl === '' || currentUrl.indexOf('file://') === 0) {
-      // Si se abre localmente, se recomienda subirlo a hosting o dar instrucción
-      currentUrl = window.location.href;
       if (currentUrl.startsWith('file:')) {
-        urlDisplaySpan.innerText = '📁 Sube este archivo HTML a un hosting (o usa GitHub Pages)';
+        urlDisplaySpan.innerText = '📁 Sube este archivo HTML a un hosting (o GitHub Pages)';
         urlDisplaySpan.style.color = '#facc15';
       } else {
         urlDisplaySpan.innerText = currentUrl || 'Enlace actual - copia manualmente';
@@ -421,32 +494,23 @@
       urlDisplaySpan.innerText = currentUrl;
     }
 
-    // Función para copiar el enlace al portapapeles (funciona en móviles)
     function copyLinkToClipboard() {
       let urlToCopy = window.location.href;
       if (urlToCopy === 'about:blank' || urlToCopy === '') urlToCopy = document.URL;
       if (urlToCopy.startsWith('file:')) {
         statusDiv.style.display = 'block';
-        statusDiv.innerHTML = "⚠️ Este archivo está en local. Para compartir en móvil, súbelo a un servidor web o GitHub Pages.";
+        statusDiv.innerHTML = "⚠️ Este archivo está en local. Para compartir en móvil, súbelo a un servidor web.";
         statusDiv.style.background = "#2d1f2a";
-        setTimeout(() => {
-          setTimeout(() => { statusDiv.style.display = 'none'; }, 4000);
-        }, 100);
+        setTimeout(() => { statusDiv.style.display = 'none'; }, 4000);
         return;
       }
-      
-      // Usar la API de clipboard moderna
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(urlToCopy).then(() => {
           statusDiv.style.display = 'block';
-          statusDiv.innerHTML = "✅ Enlace copiado al portapapeles. ¡Pégalo en WhatsApp, correo o mensaje!";
+          statusDiv.innerHTML = "✅ Enlace copiado. ¡Comparte la encuesta Start-Ip!";
           statusDiv.style.background = "#0f2e1a";
-          setTimeout(() => {
-            statusDiv.style.display = 'none';
-          }, 3000);
-        }).catch(err => {
-          fallbackCopy(urlToCopy);
-        });
+          setTimeout(() => { statusDiv.style.display = 'none'; }, 3000);
+        }).catch(() => fallbackCopy(urlToCopy));
       } else {
         fallbackCopy(urlToCopy);
       }
@@ -460,16 +524,13 @@
       document.execCommand('copy');
       document.body.removeChild(textarea);
       statusDiv.style.display = 'block';
-      statusDiv.innerHTML = "📋 Enlace copiado (método alternativo). Compártelo con Franklin.";
-      statusDiv.style.background = "#1e293b";
-      setTimeout(() => {
-        statusDiv.style.display = 'none';
-      }, 3000);
+      statusDiv.innerHTML = "📋 Enlace copiado al portapapeles. Comparte tu opinión.";
+      statusDiv.style.background = "#1e3a2f";
+      setTimeout(() => { statusDiv.style.display = 'none'; }, 3000);
     }
 
     copyBtn.addEventListener('click', copyLinkToClipboard);
 
-    // Funciones del formulario (envío por mail)
     function getSelectedRadioValue(name) {
       const radios = document.querySelectorAll(`input[name="${name}"]`);
       for (let radio of radios) {
@@ -479,66 +540,69 @@
     }
 
     function buildEmailBody() {
-      const responsable = getSelectedRadioValue('responsable');
-      const mentalidad = getSelectedRadioValue('mentalidad');
-      const problemas = getSelectedRadioValue('problemas');
-      const equipo = getSelectedRadioValue('equipo');
-      const profesional = getSelectedRadioValue('profesional');
+      const categoria = getSelectedRadioValue('categoria');
+      const tipo = getSelectedRadioValue('tipo');
+      const funcion = getSelectedRadioValue('funcion');
+      const frecuencia = getSelectedRadioValue('frecuencia');
+      const monto = getSelectedRadioValue('monto');
+      const desconfianza = getSelectedRadioValue('desconfianza');
+      const diseno = getSelectedRadioValue('diseno');
+      const social = getSelectedRadioValue('social');
+      const pago = getSelectedRadioValue('pago');
 
-      let mejora = document.querySelector('textarea[name="mejora"]').value.trim();
-      if (mejora === "") mejora = "(No se especificó)";
-
-      let notaRaw = document.querySelector('input[name="nota"]').value.trim();
-      let notaFinal = "No especificada";
-      if (notaRaw !== "") {
-        const parsed = parseFloat(notaRaw);
-        if (!isNaN(parsed) && parsed >= 1 && parsed <= 10) notaFinal = parsed.toString();
-        else notaFinal = notaRaw + " (valor inválido, usar 1-10)";
-      }
+      let sugerencia = document.querySelector('textarea[name="sugerencia"]').value.trim();
+      if (sugerencia === "") sugerencia = "(No especificó)";
 
       let evaluador = document.querySelector('input[name="evaluador"]').value.trim();
-      if (evaluador === "") evaluador = "Anónimo (evaluador sin identificar)";
+      if (evaluador === "") evaluador = "Anónimo";
 
       const now = new Date();
       const fechaHora = now.toLocaleString();
 
-      let body = "📊 EVALUACIÓN FRANKLIN PATZI MARCE 📊\n";
-      body += "─────────────────────────────────────\n";
+      let body = "🏷️ ENCUESTA START-IP · APP DE SUBASTAS 🏷️\n";
+      body += "─────────────────────────────────────────\n";
       body += `📅 Fecha: ${fechaHora}\n`;
       body += `👤 Evaluador: ${evaluador}\n\n`;
+      body += "👥 EQUIPO START-IP:\n";
+      body += "• Franklin Patzi Marce - Líder / PO / Tester\n";
+      body += "• Angelica Burgos - Documentador\n";
+      body += "• Jhoao Cesar Daza Vargas - Frontend\n";
+      body += "• Lucio Daniel Ticona - Backend\n\n";
       body += "🔹 RESPUESTAS:\n";
-      body += `1. ¿Es responsable? → ${responsable}\n`;
-      body += `2. ¿Mentalidad ingeniero? → ${mentalidad}\n`;
-      body += `3. ¿Resuelve problemas bien? → ${problemas}\n`;
-      body += `4. ¿Trabaja en equipo? → ${equipo}\n`;
-      body += `5. ¿Qué mejorar? → ${mejora}\n`;
-      body += `6. ¿Buen profesional? → ${profesional}\n`;
-      body += `7. Nota (1-10): → ${notaFinal}\n\n`;
-      body += "💬 Puedes agregar comentarios extra antes de enviar.\n";
-      body += "─────────────────────────────────────\n";
+      body += `1. Categorías favoritas → ${categoria}\n`;
+      body += `2. Tipo de subasta → ${tipo}\n`;
+      body += `3. Funcionalidad más valorada → ${funcion}\n`;
+      body += `4. Frecuencia de uso → ${frecuencia}\n`;
+      body += `5. Monto habitual de puja → ${monto}\n`;
+      body += `6. Mayor desconfianza → ${desconfianza}\n`;
+      body += `7. Estilo de diseño → ${diseno}\n`;
+      body += `8. Funciones sociales → ${social}\n`;
+      body += `9. Método de pago favorito → ${pago}\n`;
+      body += `10. Sugerencia adicional → ${sugerencia}\n\n`;
+      body += "💡 ¡Gracias por ayudar a mejorar Start-Ip!\n";
+      body += "─────────────────────────────────────────\n";
       return body;
     }
 
     function showWarningIfIncomplete() {
-      const radiosRequired = ['responsable', 'mentalidad', 'problemas', 'equipo', 'profesional'];
+      const requiredRadios = ['categoria', 'tipo', 'funcion', 'frecuencia', 'monto', 'desconfianza', 'diseno', 'social', 'pago'];
       let missing = [];
-      for (let req of radiosRequired) {
+      for (let req of requiredRadios) {
         const anyChecked = document.querySelector(`input[name="${req}"]:checked`);
         if (!anyChecked) missing.push(req);
       }
-      const notaInput = document.querySelector('input[name="nota"]');
-      let notaEmpty = false;
-      if (!notaInput.value.trim()) notaEmpty = true;
-
-      if (missing.length > 0 || notaEmpty) {
-        let msg = "⚠️ Algunas respuestas están vacías:\n";
-        if (missing.includes('responsable')) msg += "- Pregunta 1 (responsable)\n";
-        if (missing.includes('mentalidad')) msg += "- Pregunta 2 (mentalidad ingenieril)\n";
-        if (missing.includes('problemas')) msg += "- Pregunta 3 (resolución de problemas)\n";
-        if (missing.includes('equipo')) msg += "- Pregunta 4 (trabajo en equipo)\n";
-        if (missing.includes('profesional')) msg += "- Pregunta 6 (futuro profesional)\n";
-        if (notaEmpty) msg += "- Nota (pregunta 7)\n";
-        msg += "\n¿Deseas continuar de todas formas? (Se enviará el formulario parcial)";
+      if (missing.length > 0) {
+        let msg = "⚠️ Algunas preguntas no tienen respuesta:\n";
+        if (missing.includes('categoria')) msg += "- Pregunta 1 (categorías)\n";
+        if (missing.includes('tipo')) msg += "- Pregunta 2 (tipo de subasta)\n";
+        if (missing.includes('funcion')) msg += "- Pregunta 3 (funcionalidad)\n";
+        if (missing.includes('frecuencia')) msg += "- Pregunta 4 (frecuencia)\n";
+        if (missing.includes('monto')) msg += "- Pregunta 5 (rango de puja)\n";
+        if (missing.includes('desconfianza')) msg += "- Pregunta 6 (desconfianza)\n";
+        if (missing.includes('diseno')) msg += "- Pregunta 7 (diseño app)\n";
+        if (missing.includes('social')) msg += "- Pregunta 8 (funciones sociales)\n";
+        if (missing.includes('pago')) msg += "- Pregunta 9 (método de pago)\n";
+        msg += "\n¿Deseas enviar de todas formas? (respuestas incompletas)";
         return !confirm(msg);
       }
       return false;
@@ -548,13 +612,14 @@
       const cancelled = showWarningIfIncomplete();
       if (cancelled) return;
 
-      const subject = encodeURIComponent("Evaluación para Franklin Patzi Marce - Respuesta privada");
+      const subject = encodeURIComponent("Start-Ip - Preferencias para app de subastas");
       let bodyText = buildEmailBody();
-      const mailtoLink = `mailto:?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+      // mailto con destinatario fijo
+      const mailtoLink = `mailto:${DESTINO_CORREO}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
 
       statusDiv.style.display = 'block';
-      statusDiv.innerHTML = "📧 Abriendo cliente de correo... Envía el mensaje a Franklin o al destinatario.<br>✏️ Puedes editar antes de enviar.";
-      statusDiv.style.background = "#0f212e";
+      statusDiv.innerHTML = `📧 Abriendo correo hacia <strong>${DESTINO_CORREO}</strong>...<br>✏️ Puedes editar el mensaje antes de enviar.`;
+      statusDiv.style.background = "#0f2e1e";
       setTimeout(() => {
         window.location.href = mailtoLink;
       }, 200);
@@ -567,16 +632,15 @@
 
     const form = document.getElementById('evalForm');
     form.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter' && (e.target.tagName !== 'TEXTAREA' && e.target.type !== 'number')) {
+      if (e.key === 'Enter' && (e.target.tagName !== 'TEXTAREA' && e.target.type !== 'text')) {
         e.preventDefault();
       }
     });
 
-    // Si la URL es muy larga o se ve fea, podemos mostrar un texto más amigable en móvil (sin afectar funcionalidad)
+    // Mejora visual para móvil si la url es muy larga
     if (window.innerWidth <= 600) {
       let shortHint = window.location.href;
       if (shortHint.length > 70 && !shortHint.startsWith('file:')) {
-        // Mostrar versión recortada para no romper diseño, pero el enlace real se copia completo
         let displayShort = shortHint.substring(0, 55) + "…";
         urlDisplaySpan.innerText = displayShort;
         urlDisplaySpan.title = shortHint;
